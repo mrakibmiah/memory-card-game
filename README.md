@@ -6,6 +6,8 @@ Responsive design. works on mobile and desktop.
 
 ![Game image](./src/assets/images/readme.png)
 
+[Live Demo](https://memory-card-game-756b8.firebaseapp.com/)
+
 Game rules
   - Single player
   - one card open at a time
@@ -19,8 +21,6 @@ Future work
  - add moves limit.
 
 Comment your ideas, you would like to add to the game.
-
-[Live Demo](https://memory-card-game-756b8.firebaseapp.com/)
 
 # Tech stack
  - NPM package
