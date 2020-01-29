@@ -6,7 +6,7 @@ Responsive design. works on mobile and desktop.
 
 ![Game image](./src/assets/images/readme.png)
 
-[Live Demo](https://memory-card-game-756b8.firebaseapp.com/)
+[Live Demo](https://memory-card-game-756b8.firebaseapp.com/) Tested on Chrome desktop and mobile.
 
 Game rules
   - Single player
