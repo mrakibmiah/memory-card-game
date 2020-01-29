@@ -4,7 +4,7 @@ import MemoryCardGame from '../../src/js/MemoryCardGame';
 import jsdom from 'mocha-jsdom';
 
 
-describe('MemoryCardGame', function () {
+describe('MemoryCardGame', function (done) {
   jsdom({
     html: '',
     src: '',

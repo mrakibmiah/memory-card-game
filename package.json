@@ -57,5 +57,9 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.9.0"
+  },
+  "engines": {
+    "node": "^10.13.0",
+    "yarn": "^1.5.1"
   }
 }

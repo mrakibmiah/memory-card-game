@@ -1,4 +1,12 @@
+/**
+ * MemoryCardGame. this is card game class. export as a module. can be used as import.
+ */
 class MemoryCardGame {
+
+  /**
+   * initialize the required variables in the constructor
+   * @returns void
+   */
   constructor () {
     this.firstCard = '';
     this.secondCard = '';
@@ -17,11 +25,18 @@ class MemoryCardGame {
     };
   }
 
+  /**
+   *drawMatch. this method is checking the card match, when player open two cards.
+
+   * @returns void
+   */
   drawMatch () {
     const isCardMatched = this.firstCard.dataset.type === this.secondCard.dataset.type;
 
     if (isCardMatched) {
       this.winCounter++;
+
+      // check if the player has completed the game.
       if (this.winCounter === 8) {
         this.winPop();
       }
@@ -30,6 +45,11 @@ class MemoryCardGame {
     }
   }
 
+  /**
+   * resetFlippedCard. this method flip back the unmatched cards, and reset values.
+   *
+   * @returns void
+   */
   resetFlippedCard () {
     this.isGameLocked = true;
     setTimeout(() => {
@@ -44,11 +64,21 @@ class MemoryCardGame {
     }, 500);
   }
 
+  /**
+   * winPop. show win message.
+   *
+   * @returns void
+   */
   winPop () {
     alert(`Congrats you won in ${this.moveCounter} moves and in ${this.timer.hour} hours ${this.timer.min} minutes and ${this.timer.sec} seconds`);
     this.restartGame();
   }
 
+  /**
+   * restartGame. this method restart the game by reinitializing all variables.
+   *
+   * returns void
+   */
   restartGame () {
     this.cards.forEach(card => {
       const randomPos = Math.floor(Math.random() * 16);
@@ -69,6 +99,9 @@ class MemoryCardGame {
     this.timerElement.innerHTML = 'playing time: 0 minute 0 seconds';
   }
 
+  /**
+   * startTimer. start the game timer when user open two cards
+   */
   startTimer () {
     this.timer.intervalId = setInterval(() => {
       this.timerElement.innerHTML = `Playing time: ${this.timer.min} minutes ${this.timer.sec} seconds`;
@@ -84,6 +117,9 @@ class MemoryCardGame {
     }, 1000);
   }
 
+  /**
+   * gameInit. bootstrapping the game. entry point of launching the game.
+   */
   gameInit () {
     const self = this;
     const restart = document.querySelector('.restart');
@@ -93,6 +129,7 @@ class MemoryCardGame {
     });
 
     this.cards.forEach(card => card.addEventListener('click', function () {
+      // if the game is locked, return without doing further.
       if (self.isGameLocked) return;
 
       this.childNodes[1].classList.add('flip');
