@@ -2,6 +2,8 @@
 
 Concentration, also known as Match Match, Match Up, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.
 
+Responsive design. works on mobile and desktop.
+
 ![Game image](./src/assets/images/readme.png)
 
 Game rules
@@ -18,7 +20,7 @@ Future work
 
 Comment your ideas, you would like to add to the game.
 
-[Live Demo](https://breakdance.github.io/breakdance/)
+[Live Demo](https://memory-card-game-756b8.firebaseapp.com/)
 
 # Tech stack
  - NPM package
@@ -82,5 +84,6 @@ Open e2e test report
 ```
 yarn report:open
 ```
+
 # Contribution
 If you would like to contribute or do any any improvment of the code, please create a PR or contact me at rakibuiu@gmail.com

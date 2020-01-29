@@ -2,7 +2,6 @@
  * MemoryCardGame. this is card game class. export as a module. can be used as import.
  */
 class MemoryCardGame {
-
   /**
    * initialize the required variables in the constructor
    * @returns void
