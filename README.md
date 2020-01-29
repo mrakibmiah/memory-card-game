@@ -86,4 +86,4 @@ yarn report:open
 ```
 
 # Contribution
-If you would like to contribute or do any any improvment of the code, please create a PR or contact me at rakibuiu@gmail.com
+If you would like to contribute or do any improvment of the code, please create a PR or contact me at rakibuiu@gmail.com
