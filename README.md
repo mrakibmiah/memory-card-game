@@ -67,7 +67,7 @@ Run unit test
 yarn test
 ```
 
-run end ot end test
+Run End to End test
 
 ```
 yarn tests:e2e
