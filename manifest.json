@@ -1,0 +1,16 @@
+{
+    "name": "MemoryGame",
+    "short_name": "PWAConf",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#2A3443",
+    "description": "A demo app for a fictional conference",
+    "theme_color": "#2A3443",
+    "icons": [
+      {
+        "src": "./assets/images/pwa.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

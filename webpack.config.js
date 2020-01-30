@@ -21,6 +21,26 @@ module.exports = {
         to: path.resolve(__dirname, 'dist/assets/images/'),
         context: './src/assets/images'
       }
+    ]),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(
+          __dirname,
+          './manifest.json'
+        ),
+        to: path.resolve(__dirname, 'dist/'),
+        context: './'
+      }
+    ]),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(
+          __dirname,
+          './sw.js'
+        ),
+        to: path.resolve(__dirname, 'dist/'),
+        context: './'
+      }
     ])
   ],
   devServer: {

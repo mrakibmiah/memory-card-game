@@ -3,3 +3,4 @@ test-report/
 yarn.lock
 dist
 .firebase/
+yarn-error.log
