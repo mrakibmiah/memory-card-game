@@ -6,7 +6,7 @@ class MemoryCardGame {
    * initialize the required variables in the constructor
    * @returns void
    */
-  constructor () {
+  constructor() {
     this.firstCard = '';
     this.secondCard = '';
     this.isCardOpen = false;
@@ -29,7 +29,7 @@ class MemoryCardGame {
 
    * @returns void
    */
-  drawMatch () {
+  drawMatch() {
     const isCardMatched = this.firstCard.dataset.type === this.secondCard.dataset.type;
 
     if (isCardMatched) {
@@ -37,7 +37,9 @@ class MemoryCardGame {
 
       // check if the player has completed the game.
       if (this.winCounter === 8) {
-        this.winPop();
+        setTimeout(() => {
+          this.winPop();
+        }, 0);
       }
     } else {
       this.resetFlippedCard();
@@ -49,7 +51,7 @@ class MemoryCardGame {
    *
    * @returns void
    */
-  resetFlippedCard () {
+  resetFlippedCard() {
     this.isGameLocked = true;
     setTimeout(() => {
       this.firstCard.childNodes[1].classList.remove('flip');
@@ -68,7 +70,7 @@ class MemoryCardGame {
    *
    * @returns void
    */
-  winPop () {
+  winPop() {
     alert(`Congrats you won in ${this.moveCounter} moves and in ${this.timer.hour} hours ${this.timer.min} minutes and ${this.timer.sec} seconds`);
     this.restartGame();
   }
@@ -78,7 +80,7 @@ class MemoryCardGame {
    *
    * returns void
    */
-  restartGame () {
+  restartGame() {
     this.cards.forEach(card => {
       const randomPos = Math.floor(Math.random() * 16);
       card.childNodes[1].classList.remove('flip');
@@ -101,7 +103,7 @@ class MemoryCardGame {
   /**
    * startTimer. start the game timer when user open two cards
    */
-  startTimer () {
+  startTimer() {
     this.timer.intervalId = setInterval(() => {
       this.timerElement.innerHTML = `Playing time: ${this.timer.min} minutes ${this.timer.sec} seconds`;
       this.timer.sec++;
@@ -119,7 +121,7 @@ class MemoryCardGame {
   /**
    * gameInit. bootstrapping the game. entry point of launching the game.
    */
-  gameInit () {
+  gameInit() {
     const self = this;
     const restart = document.querySelector('.restart');
 

@@ -5,8 +5,9 @@ Concentration, also known as Match Match, Match Up, Memory, Pelmanism, Shinkei-s
 Responsive design. works on mobile and desktop.
 
 ![Game image](./src/assets/images/readme.png)
+![Game image](./src/assets/images/readme2.png)
 
-[Live Demo](https://memory-card-game-756b8.firebaseapp.com/) Tested on Chrome desktop and mobile.
+[Live Demo](https://memory-card-game-756b8.firebaseapp.com/) Tested on Chrome,safari desktop and mobile.
 
 Game rules
   - Single player
